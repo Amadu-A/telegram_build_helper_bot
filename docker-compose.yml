@@ -1,0 +1,10 @@
+# docker-compose.yml
+version: "3.8"
+
+services:
+  bot:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+    command: python -m bot.main
